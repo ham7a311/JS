@@ -1,3 +1,6 @@
+/* Recreate Some Built-in Math functions */
+
+
 Math.myAbs = function (num) {
     if (num < 0) {
         return -num;
