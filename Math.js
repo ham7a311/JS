@@ -38,30 +38,6 @@ Math.myMin = function (...numbers) {
 
 
 
-
-
-Math.myCeil = function (num) {
-    if (Number.isNaN(num)) {
-        return NaN;
-    }
-
-    if (!Number.isInteger(num)) {
-        return Math.floor(num) + 1;
-    }
-}
-
-
-Math.myFloor = function (num) {
-    if (Number.isNaN(num)) {
-        return NaN;
-    }
-
-    if (!Number.isInteger(num)) {
-        return Math.ceil(num) - 1;
-    }
-}
-
-
 Math.myRound = function (num) {
     let arr = Array.from(num.toString());
     arr.splice(2, arr.indexOf("."));
@@ -72,6 +48,24 @@ Math.myRound = function (num) {
     } else {
         return integer;
     };
+}
+
+
+Math.myCeil = function (num) {
+    if (num === (num | 0)) { 
+        return num; 
+    }
+    
+    return (num > 0) ? (num | 0) + 1 : (num | 0);
+}
+
+
+Math.myFloor = function (num) {
+    if (num === (num | 0)) {
+        return num;
+    }
+
+    return (num > 0) ? (num | 0) : (num | 0) - 1;
 }
 
 
