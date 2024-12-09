@@ -4,4 +4,4 @@
 
 ===>  Recreating JS Functions(recreating built-in functions such as Array.slice(), Math.round(), String.toUppercase(), and many more...). => Focus : Understanding JS Under The Hood
 
-===> Most (if not all) of these Functions Will Not require advanced Math.
+===> Most (if not all) of these Functions Do Not require advanced Math.
