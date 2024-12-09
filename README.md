@@ -1,4 +1,4 @@
-This Repository will deepen your JS Understanding by: 
+===> Creating JS Projects 
 
 ===>  Creating JS Functions(from Leetcode, JSChallenger, CodeWars, ...etc). => Focus : Problem Solving Skills.
 
