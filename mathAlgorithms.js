@@ -1,6 +1,6 @@
 /*                                                                  JS Algorithms
 
-Two solutions for each function, recursive and itterative
+Two solutions for each function, recursive and itterative and one bitwise solution
 
 */
 
@@ -10,7 +10,7 @@ Two solutions for each function, recursive and itterative
 
 
 /* 
-1. (1) factorial
+1. (1) factorial   ===> Itteratie Algorithm
 This function calculates the factorial of a given non-negative integer num. The factorial of a number n (denoted as n!) is the product of all positive integers from 1 to n. The function works as follows:
 
 It initializes a variable result to 1.
@@ -37,7 +37,7 @@ function factorial(n) {
 
 
 /* 
-1. (2) recursiveFactorial
+1. (2) recursiveFactorial  ===> Recursive Algorithm
 This function calculates the factorial of a non-negative integer nnn using a recursive approach. 
 The factorial of a number nnn, denoted as n!n!n!, is the product of all positive integers from 1 to nnn.
 */
@@ -53,7 +53,7 @@ function recursiveFactorial(n) {
 
 
 /* 
-2. (1) fibonacci
+2. (1) fibonacci  ===> Itteratie Algorithm
 This function generates the Fibonacci sequence up to the n-th term. The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones, starting from 0 and 1. The function operates as follows:
 
 It initializes an array fib with the first two Fibonacci numbers: 0 and 1.
@@ -73,7 +73,7 @@ function fibonacci(n) {
 
 
 /* 
-2. (2) recursiveFibonacci
+2. (2) recursiveFibonacci  ===> Recursive Algorithm
 This function calculates the nnn-th term of the Fibonacci sequence using a recursive approach.
 The Fibonacci sequence is defined such that each number is the sum of the two preceding ones, starting from 0 and 1. 
 The sequence begins as follows: 0, 1, 1, 2, 3, 5, 8, 13, etc.
@@ -91,7 +91,7 @@ function recursiveFibonacci(n) {
 
 
 /* 
-3. isPrime
+3. isPrime  ===> Itteratie Algorithm
 This function checks whether a given integer n is a prime number. A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. The function works as follows:
 
 It first checks if n is less than 2; if so, it returns false, as prime numbers are defined to be greater than 1.
@@ -117,7 +117,7 @@ function isPrime(n) {
 
 
 /* 
-4. (1) isPowerOfTwo
+4. (1) isPowerOfTwo  ===> Itteratie Algorithm
 This function determines whether a given integer n is a power of two. A number is considered a power of two if it can be expressed as 2k2^k2k, where kkk is a non-negative integer (e.g., 1, 2, 4, 8, 16, etc.). The function works as follows:
 
 It first checks if n is less than 1. If so, it returns false, since powers of two are positive integers.
@@ -150,7 +150,7 @@ function isPowerOfTwo(n) {
 
 
 /* 
-4. (2) isPowerOfTwoBitWise
+4. (2) isPowerOfTwoBitWise  ===> Bitwise Algorithm
 This function also checks whether a given integer n is a power of two, but it does so using a bitwise operation for a more efficient solution. The key property of powers of two in binary representation is that they have exactly one bit set to 1. The function operates as follows:
 
 It first checks if n is less than 1. If so, it returns false, since powers of two are positive integers.
