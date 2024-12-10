@@ -1,4 +1,4 @@
-===> Creating JS Projects 
+===> Creating JS Projects => Folder with project's name
 
 ===>  CreateFunc.js => Creating JS Functions(from Leetcode, JSChallenger, CodeWars, ...etc). => Focus : Problem Solving Skills.
 
