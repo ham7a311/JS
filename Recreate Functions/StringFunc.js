@@ -19,7 +19,17 @@ String.prototype.myCharAt = function (index) {
 
 
 String.prototype.myConcat = function (str) {
-    return this + str;
+    if (arguments.length === 0) {
+        return this;
+    } 
+
+    let result = this;
+
+    for (let argument of arguments) {
+        result += argument;
+    }
+
+    return result;
 }
 
 
@@ -58,8 +68,89 @@ String.prototype.myIndexOf = function (str, position = 0) {
         }
         if (found) {
             return i;
-        };
-    };
+        }
+    }
 
     return -1;
+}
+
+
+String.prototype.myRepeat = function (count) {
+    let result = "";
+
+    if (count <= 0 || isNaN(count)) {
+        return "";
+    }
+
+    for (let i = 0; i < count; i++) {
+        result += this;
+    }
+
+    return result;
+} 
+
+
+String.prototype.mySplit = function (delimiter) {
+    if (delimiter === "") {
+        return [...this];
+    } 
+
+    const result = [];
+
+    let currentString = "";
+    for (let i = 0; i < this.length; i++) {
+        if (this[i] === delimiter) {
+            result.push(currentString);
+            currentString = "";
+        } else {
+            currentString += this[i];
+        }
+    }
+
+    if (currentString) {
+        result.push(currentString);
+    }
+
+    return result;
+
+}
+
+
+String.prototype.mySlice = function (start = 0, end = this.length) {
+
+    if (start < 0) {
+        start = Math.max(this.length + start, 0);
+    }
+
+    if (end < 0) {
+        end = Math.max(this.length + end, 0);
+    }
+
+    if (start > end) {
+        return "";
+    }
+
+    let result = "";
+
+    for (let i = start; i < end; i++) {
+        result += this[i];
+    }
+
+    return result;
+
+}
+
+
+String.prototype.myToUpperCase = function () {
+    let result = "";
+
+    for (let i = 0; i < this.length; i++) {
+        if (this[i] >= 'a' && this[i] <= 'z') {
+            result += String.fromCharCode(this[i].charCodeAt(0) - 32);
+        } else {
+            result += this[i];
+        }
+    }
+
+    return result;
 }
