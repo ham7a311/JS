@@ -93,3 +93,26 @@ Array.prototype.myToString = function () {
 
     return result.join("");
 }
+
+
+Array.prototype.myFlat = function (depth = 1) {
+    let result = [];
+
+    if (this.length === 0) {
+        return result;
+    }
+
+    if (depth <= 0) {
+        return this.slice();
+    }
+
+    for (let i = 0; i < this.length; i++) {
+        if (Array.isArray(this[i])) {
+            result = result.concat(this[i].myFlat(depth - 1));
+        } else {
+            result.push(this[i]);
+        }
+    }
+
+    return result;
+}
