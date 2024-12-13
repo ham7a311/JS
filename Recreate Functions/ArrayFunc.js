@@ -116,3 +116,20 @@ Array.prototype.myFlat = function (depth = 1) {
 
     return result;
 }
+
+
+Array.prototype.myReverse = function () {
+    let leftIndex = 0;
+    let rightIndex = this.length - 1;
+
+    while (leftIndex < rightIndex) {
+        let temp = this[leftIndex];
+        this[leftIndex] = this[rightIndex];
+        this[rightIndex] = temp;
+
+        leftIndex++;
+        rightIndex--;
+    }
+
+    return this;
+}
