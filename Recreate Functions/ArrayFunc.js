@@ -34,3 +34,62 @@ Array.prototype.myUnshift = function (...elements) {
     this.length = currentLength + elements.length;
     return this.length;
 }
+
+
+Array.prototype.myFill = function (value, start = 0, end = this.length) {
+    if (start < 0) {
+        start += this.length;
+    }
+
+    if (end < 0) {
+        end += this.length;
+    }
+
+    start = Math.max(start, 0);
+    end = Math.min(end, this.length);
+
+
+
+    if (start < end) {
+        for (let i = start; i < end; i++) {
+            this[i] = value;
+        }
+    }
+
+    return this;
+    
+}
+
+
+Array.prototype.myIncludes = function (value, start) {
+    if (start < 0) {
+        start += this.length;
+    }
+
+    if (start === undefined) {
+        start = 0;
+    }
+
+    start = Math.max(start, 0);
+    start = Math.min(start, this.length);
+
+    for (let i = start; i < this.length; i++) {
+        if (this[i] === value) {
+            return true;
+        }
+    }
+
+    return false;
+
+}
+
+
+Array.prototype.myToString = function () {
+    let result = [];
+
+    for (let i = 0; i < this.length; i++) {
+        result.push(String(this[i]));
+    }
+
+    return result.join("");
+}
