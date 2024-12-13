@@ -18,7 +18,7 @@ String.prototype.myCharAt = function (index) {
 }
 
 
-String.prototype.myConcat = function (str) {
+String.prototype.myConcat = function (...arguments) {
     if (arguments.length === 0) {
         return this;
     } 
