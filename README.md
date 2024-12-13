@@ -5,4 +5,4 @@
 ===>  Recreate Functions Folder => Recreating JS Functions(recreating built-in functions such as Array.slice(), Math.round(), String.toUppercase(), and many more...). => Focus : Understanding JS Under The Hood
 
 
-===> HTML, TailwindCSS, JavaScript
+===> HTML, CSS, JavaScript
