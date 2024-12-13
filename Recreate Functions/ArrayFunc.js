@@ -133,3 +133,17 @@ Array.prototype.myReverse = function () {
 
     return this;
 }
+
+
+Array.prototype.myJoin = function (seperator = ',') {
+    let result = "";
+
+    for (let i = 0; i < this.length; i++) {  
+        if (i > 0) {
+            result += seperator;
+        }
+        result += String(this[i]);
+    }
+
+    return result;
+}
