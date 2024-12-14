@@ -112,3 +112,54 @@
 .mt-4 {
     margin-top: 1rem; /* Margin top of 1rem */
 }
+
+
+.bg-slate-700 {
+    background-color: #374151; /* Dark slate background */
+}
+
+/* Border Radius */
+.rounded {
+    border-radius: 0.25rem; /* Small border radius */
+}
+
+/* Padding */
+.p-2 {
+    padding: 0.5rem; /* Padding of 0.5rem */
+}
+
+/* Margin */
+.my-2 {
+    margin-top: 0.5rem; /* Margin top of 0.5rem */
+    margin-bottom: 0.5rem; /* Margin bottom of 0.5rem */
+}
+
+/* Checkbox Margin */
+.mr-2 {
+    margin-right: 0.5rem; /* Margin right of 0.5rem */
+}
+
+/* Button Styles */
+.bg-red-600 {
+    background-color: #dc2626; /* Red background */
+}
+
+.hover\:bg-red-500:hover {
+    background-color: #b91c1c; /* Darker red on hover */
+}
+
+/* Text Color */
+.text-white {
+    color: white; /* White text color */
+}
+
+/* Button Padding */
+.px-3 {
+    padding-left: 0.75rem; /* Horizontal padding */
+    padding-right: 0.75rem; /* Horizontal padding */
+}
+
+.py-1 {
+    padding-top: 0.25rem; /* Vertical padding */
+    padding-bottom: 0.25rem; /* Vertical padding */
+}
