@@ -8,14 +8,14 @@ function addTask() {
         return;
     }
 
-    li.className = `flex justify-between items-center bg-slate-700 rounded p-2 my-2`;
+    li.className = `task`;
 
     li.innerHTML = `
     <div class="flex items-center">
-        <input type="checkbox" class="mr-2" onchange="toggleComplete(this)">
+        <input type="checkbox" class="checkbox" onchange="toggleComplete(this)">
         <span class="task-text">${task}</span>
     </div>
-    <button onclick="removeTask(this)" class="bg-red-600 hover:bg-red-500 text-white rounded px-3 py-1">
+    <button onclick="removeTask(this)" class="remove">
         <i class="fas fa-trash-alt"></i>
     </button>
 `;
