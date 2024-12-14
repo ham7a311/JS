@@ -4,45 +4,202 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>      body {
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: white;
+      }
+      .cont {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        border-radius: 7px;
+        background-color: transparent;
+
+      }
+
+      h4 {
+        display: block;
+        font-size: large;
+        color: black;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      p {
+        color: black;
+        opacity: 0.5;
+        text-align: center;
+      }
+
+      form {
+        margin-bottom: 8px;
+        margin-top: 32px;
+        width: 320px;
+        max-width: 1024px;
+
+      }
+
+      @media (min-width: 640px) {
+        form {
+          width: 384px;
+        }
+      } 
+
+      .cont {
+    margin-bottom: 0.25rem; /* mb-1 */
+    display: flex; /* flex */
+    flex-direction: column; /* flex-col */
+    gap: 1.5rem; /* gap-6 */
+}
+
+/* Inner div styles */
+.cont > div {
+    width: 100%; /* w-full */
+    max-width: 24rem; /* max-w-sm */
+    min-width: 200px; /* min-w-[200px] */
+}
+
+/* Label styles */
+label {
+    display: block; /* block */
+    margin-bottom: 0.5rem; /* mb-2 */
+    font-size: 0.875rem; /* text-sm */
+    color: #4b5563; /* text-slate-600 */
+}
+
+/* Input container styles */
+.cont > div > div {
+    display: flex; /* flex */
+    justify-content: space-between; /* justify-between */
+    align-items: center; /* items-center */
+    width: 100%; /* w-full */
+    background-color: transparent; /* bg-transparent */
+    color: #374151; /* text-slate-700 */
+    font-size: 0.875rem; /* text-sm */
+    border: 1px solid #e5e7eb; /* border-slate-200 */
+    border-radius: 0.375rem; /* rounded-md */
+    padding: 0.5rem 0.75rem; /* px-3 py-2 */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* transition duration-300 ease */
+}
+
+/* Input focus and hover styles */
+.cont > div > div:focus-within {
+    outline: none; /* focus:outline-none */
+    border-color: #60a5fa; /* focus:border-slate-400 */
+}
+
+.cont > div > div:hover {
+    border-color: #d1d5db; /* hover:border-slate-300 */
+}
+
+.cont > div > div:focus-within {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* focus:shadow */
+}
+
+/* Input styles */
+.pass-input {
+    outline: none; /* focus:outline-none */
+}
+
+/* Icon styles */
+.copy-btn {
+    color: black; /* text-black */
+    cursor: pointer; /* cursor-pointer */
+}
+
+.btn {
+    padding: 0.75rem; /* p-3 */
+    background-color: #3b82f6; /* Example color for .power, adjust as needed */
+    color: white; /* text-white */
+    border-radius: 0.375rem; /* rounded */
+    display: inline-block; /* Ensures the anchor behaves like a button */
+    text-align: center; /* Center text */
+}
+
+/* Align self start for flex containers */
+.align-self-start {
+    align-self: flex-start; /* Aligns the item to the start of the flex container */
+}
+
+/* Button styles for the button element */
+.generate-pass-btn {
+    margin-top: 1rem; /* mt-4 */
+    width: 100%; /* w-full */
+    border-radius: 0.375rem; /* rounded-md */
+    background-color: #1e3a8a; /* bg-slate-800 */
+    padding: 0.5rem 1rem; /* py-2 px-4 */
+    border: 1px solid transparent; /* border border-transparent */
+    text-align: center; /* text-center */
+    font-size: 0.875rem; /* text-sm */
+    color: white; /* text-white */
+    transition: all 0.3s; /* transition-all */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+}
+
+/* Hover and focus effects */
+.generate-pass-btn:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* hover:shadow-lg */
+    background-color: #1e40af; /* hover:bg-slate-700 */
+}
+
+.generate-pass-btn:focus {
+    background-color: #1e40af; /* focus:bg-slate-700 */
+    box-shadow: none; /* focus:shadow-none */
+}
+
+.generate-pass-btn:active {
+    background-color: #091233; /* active:bg-slate-700 */
+    box-shadow: none; /* active:shadow-none */
+}
+
+/* Disabled state styles */
+.generate-pass-btn:disabled {
+    pointer-events: none; /* disabled:pointer-events-none */
+    opacity: 0.5; /* disabled:opacity-50 */
+    box-shadow: none; /* disabled:shadow-none */
+}
+</style>
   </head>
-  <body class="flex justify-center items-center min-h-screen">
-    <div class="relative flex flex-col rounded-xl bg-transparent">
-      <h4 class="block text-xl font-medium text-slate-800 text-center">
-        Password Generator
-      </h4>
-      <p class="text-slate-500 font-light text-center">
-        Generate A Random Password !
-      </p>
-      <form class="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96 form">
-        <div class="mb-1 flex flex-col gap-6">
-          <div class="w-full max-w-sm min-w-[200px]">
-            <label class="block mb-2 text-sm text-slate-600"> Password </label>
-            <div
-              class="flex justify-between items-center w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
-            >
-              <input
-                type="text"
-                class="pass-input focus:outline-none"
-                readonly
-                placeholder="Your Password"
-              />
-              <i class="fas fa-copy text-black copy-btn cursor-pointer"></i>
+  <body>
+      <div class="cont">
+        <h4>
+          Password Generator
+        </h4>
+        <p>
+          Generate A Random Password !
+        </p>
+        <form class="form">
+          <div class="cont">
+            <div>
+              <label> Password </label>
+              <div
+              >
+                <input
+                  type="text"
+                  class="pass-input"
+                  readonly
+                  placeholder="Your Password"
+                />
+                <i class="fas fa-copy copy-btn"></i>
+              </div>
+            </div>
+            <div>
+              <a class="btn p-3 power align-self-start"></a>
             </div>
           </div>
-          <div>
-            <a class="btn p-3 power text-white rounded align-self-start"></a>
-          </div>
-        </div>
-        <button
-          class="mt-4 w-full rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none generate-pass-btn"
-          type="button"
-        >
-          <i class="fas fa-bolt"></i> Generate password
-        </button>
-      </form>
-    </div>
+          <button
+            class="generate-pass-btn"
+            type="button"
+          >
+            <i class="fas fa-bolt"></i> Generate password
+          </button>
+        </form>
+      </div>
 
     <script src="main.js"></script>
   </body>
