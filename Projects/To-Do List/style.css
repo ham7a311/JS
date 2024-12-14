@@ -1,0 +1,62 @@
+/* General Body Styles */
+body {
+    background-color: #1e293b; /* bg-slate-900 */
+    color: white; /* text-white */
+    display: flex; /* flex */
+    align-items: center; /* items-center */
+    justify-content: center; /* justify-center */
+    min-height: 100vh; /* min-h-screen */
+    padding: 1rem; /* p-4 */
+}
+
+/* Container Styles */
+.container {
+    background-color: #334155; /* bg-slate-800 */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-lg */
+    width: 24rem; /* w-96 */
+    padding: 1.5rem; /* p-6 */
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 600; /* font-semibold */
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+/* Input and Button Container */
+.input-container {
+    display: flex; /* flex */
+    align-items: center; /* items-center */
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+/* Input Styles */
+input[type="text"] {
+    border: 1px solid #4b5563; /* border-gray-600 */
+    border-radius: 0.25rem; /* rounded */
+    padding: 0.5rem; /* p-2 */
+    width: 100%; /* w-full */
+    background-color: #374151; /* bg-slate-700 */
+    color: white; /* text-white */
+}
+
+/* Button Styles */
+button {
+    background-color: #3b82f6; /* bg-blue-600 */
+    color: white; /* text-white */
+    border-radius: 0.25rem; /* rounded */
+    padding: 0.5rem 0.75rem; /* px-3 py-2 */
+    margin-left: 0.5rem; /* ml-2 */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+button:hover {
+    background-color: #2563eb; /* hover:bg-blue-500 */
+}
+
+/* Task List Styles */
+#taskList {
+    margin-top: 1rem; /* mt-4 */
+}
