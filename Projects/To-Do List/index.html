@@ -48,6 +48,7 @@
         margin-top: 20px;
         border-radius: 6px;
         padding: 20px;
+        list-style: none;
       }
       .tasks .task {
         background-color: white;
@@ -83,10 +84,10 @@
   <body>
     <div class="container">
       <div class="form">
-        <input type="text" class="input" />
+        <input type="text" class="input" id="taskInput"/>
        <i class="fas fa-plus add"></i>
       </div>
-      <div class="tasks"></div>
+      <ul id="taskList" class="tasks"></ul>
     </div>
 
     <script src="main.js"></script>
