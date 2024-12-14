@@ -11,8 +11,7 @@ function addTask() {
     li.className = `task`;
 
     li.innerHTML = `
-    <div class="flex items-center">
-        <input type="checkbox" class="checkbox" onchange="toggleComplete(this)">
+    <div>
         <span class="task-text">${task}</span>
     </div>
     <button onclick="removeTask(this)" class="remove">
@@ -24,15 +23,6 @@ function addTask() {
     input.value = "";
 }
 
-
-function toggleComplete(checkbox) {
-    const task = checkbox.nextElementSibling;
-    if (checkbox.checked) {
-        task.classList.add("line-through");
-    } else {
-        task.classList.remove("line-through");
-    }
-}
 
 function removeTask(button) {
     const li = button.parentElement;
