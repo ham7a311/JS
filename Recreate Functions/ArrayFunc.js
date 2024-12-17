@@ -147,3 +147,51 @@ Array.prototype.myJoin = function (seperator = ',') {
 
     return result;
 }
+
+
+Array.myFrom = function (iterable, mapFunc, thisArg) {
+    let result = [];
+    let count = 0;
+
+    if (typeof iterable[Symbol.iterator] !== "function") {
+        throw new Error("Uncaught TypeError: undefined is not iterable (cannot read property Symbol(Symbol.iterator))");
+    }
+
+    for (let el of iterable) {
+        if (mapFunc) {
+            result.push(mapFunc.call(thisArg, el, count, iterable));
+            
+        } else {
+            result.push(el);
+        }
+        count++;
+    } 
+
+    return result;
+}
+
+
+Array.prototype.myCopyWithin = function (target, start = 0, end = this.length) {
+    target = (target < 0) ? Math.max(0, target + this.length) : Math.min(target, this.length);
+    start = (start < 0) ? Math.max(0, start + this.length) : Math.min(start, this.length);
+    end = (end < 0) ? Math.max(0, end + this.length) : Math.min(end, this.length);
+
+
+    if (target >= this.length || start >= this.length || start >= end) {
+        return this;
+    }
+
+    if (target < start) {
+        for (let i = start; i < end; i++) {
+            this[target++] = this[i];
+        }
+    } else {
+        const count = Math.min(end - start, this.length - target);
+        for (let i = count - 1; i >= 0; i--) {
+            this[target + i] = this[start + i];
+        }
+    }
+    
+
+    return this;
+}
