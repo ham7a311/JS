@@ -39,7 +39,7 @@ function factorial(n) {
 /* 
 1. (2) recursiveFactorial  ===> Recursive Algorithm
 This function calculates the factorial of a non-negative integer nnn using a recursive approach. 
-The factorial of a number nnn, denoted as n!n!n!, is the product of all positive integers from 1 to nnn.
+The factorial of a number n, denoted as n!, is the product of all positive integers from 1 to nnn.
 */
 function recursiveFactorial(n) {
 
@@ -74,7 +74,7 @@ function fibonacci(n) {
 
 /* 
 2. (2) recursiveFibonacci  ===> Recursive Algorithm
-This function calculates the nnn-th term of the Fibonacci sequence using a recursive approach.
+This function calculates the n-th term of the Fibonacci sequence using a recursive approach.
 The Fibonacci sequence is defined such that each number is the sum of the two preceding ones, starting from 0 and 1. 
 The sequence begins as follows: 0, 1, 1, 2, 3, 5, 8, 13, etc.
 */
