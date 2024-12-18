@@ -21,9 +21,8 @@ Compare each element with the target value.
 If a match is found, return the index of that element.
 If the end of the array is reached without finding the target, return -1.
 
-Time Complexity
-
-The time complexity is O(n), where n is the number of elements in the array. This means it may need to check every element in the worst case.
+Time Complexity:
+    The time complexity is O(n), where n is the number of elements in the array. This means it may need to check every element in the worst case.
 */
 function linear(arr, target) {
     for (let i = 0; i < arr.length; i++) {
@@ -51,24 +50,22 @@ While Loop: The function enters a while loop that continues as long as leftIndex
 
 
 Finding the Middle Index: Inside the loop:
-
-The middle index is calculated using Math.floor((leftIndex + rightIndex) / 2). This gives the index of the middle element of the current search range.
-
+    The middle index is calculated using Math.floor((leftIndex + rightIndex) / 2). This gives the index of the middle element of the current search range.
 
 
 Comparison:
 
-If the element at middleindex is equal to the target, the function returns middleindex, indicating that the target has been found.
-If the target is less than the element at middleindex, it means the target must be in the left half of the array. Therefore, rightIndex is updated to middleindex - 1.
-If the target is greater than the element at middleindex, it indicates that the target is in the right half of the array, so leftIndex is updated to middleindex + 1.
+    If the element at middleindex is equal to the target, the function returns middleindex, indicating that the target has been found.
+    If the target is less than the element at middleindex, it means the target must be in the left half of the array. Therefore, rightIndex is updated to middleindex - 1.
+    If the target is greater than the element at middleindex, it indicates that the target is in the right half of the array, so leftIndex is updated to middleindex + 1.
 
 
-Return Value: If the loop exits without finding the target, the function returns -1, indicating that the target is not present in the array.
+Return Value: 
+    If the loop exits without finding the target, the function returns -1, indicating that the target is not present in the array.
 
 
-Time Complexity
-
-The time complexity of this function is O(log⁡ n). This efficiency arises because the algorithm halves the search space with each iteration, making it much faster than a linear search, especially for large datasets.
+Time Complexity:
+    The time complexity of this function is O(log⁡ n). This efficiency arises because the algorithm halves the search space with each iteration, making it much faster than a linear search, especially for large datasets.
 */
 function binary(arr, target) {
     let leftIndex = 0;
@@ -112,23 +109,24 @@ Inner Search Function: Inside recursiveBinary, a helper function named search is
 
 
 
-Base Case: The first step in the search function checks if leftIndex is greater than rightIndex. If this condition is true, it means the target is not present in the array, and the function returns -1.
+Base Case: 
+    The first step in the search function checks if leftIndex is greater than rightIndex. If this condition is true, it means the target is not present in the array, and the function returns -1.
 
-Finding the Middle Index: The middle index is calculated using Math.floor((leftIndex + rightIndex) / 2). This index represents the midpoint of the current search range.
+Finding the Middle Index: 
+    The middle index is calculated using Math.floor((leftIndex + rightIndex) / 2). This index represents the midpoint of the current search range.
 
 
 Comparison:
 
-If the element at middleindex is equal to the target, the function returns middleindex, indicating that the target has been found.
-If the target is less than the element at middleindex, the search continues in the left half of the array by recursively calling search with updated indices: search(arr, target, leftIndex, middleindex - 1).
-If the target is greater than the element at middleindex, the search continues in the right half of the array with the call: search(arr, target, middleindex + 1, rightIndex).
+    If the element at middleindex is equal to the target, the function returns middleindex, indicating that the target has been found.
+    If the target is less than the element at middleindex, the search continues in the left half of the array by recursively calling search with updated indices: search(arr, target, leftIndex, middleindex - 1).
+    If the target is greater than the element at middleindex, the search continues in the right half of the array with the call: search(arr, target, middleindex + 1, rightIndex).
 
+Return Value: 
+    The recursiveBinary function initiates the search by calling search with the initial indices set to 0 and the length of the array. The result of the search is returned.
 
-Return Value: The recursiveBinary function initiates the search by calling search with the initial indices set to 0 and the length of the array. The result of the search is returned.
-
-Time Complexity
-
-The time complexity of this function is O(log⁡ n). Because each recursive call reduces the size of the search space by half.
+Time Complexity:
+    The time complexity of this function is O(log⁡ n). Because each recursive call reduces the size of the search space by half.
 */
 function recursiveBinary(arr, target) {
     function search(arr, target, leftIndex, rightIndex) {
