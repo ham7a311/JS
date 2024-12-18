@@ -5,7 +5,12 @@ Linear search and Binary search(itterative and recursive)
 */
 
 
+
+
+
+
 /* 
+1. Linear Search ===> Itterative Algorithm
 The linear search algorithm is a simple method for finding a specific value in an array. 
 It works by checking each element one by one until it finds the target or reaches the end of the array.
 
@@ -28,3 +33,9 @@ function linear(arr, target) {
     }
     return -1; //  O(n)
 }
+
+
+
+
+
+
