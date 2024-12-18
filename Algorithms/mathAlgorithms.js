@@ -110,7 +110,7 @@ function fibonacci(n) {
 
 /* 
 2. (2) recursiveFibonacci  ===> Recursive Algorithm
-The recursive Fibonacci function calculates the nnn-th Fibonacci number using a straightforward recursive approach. The Fibonacci sequence is defined such that each number is the sum of the two preceding ones, starting from 0 and 1.
+The recursive Fibonacci function calculates the n-th Fibonacci number using a straightforward recursive approach. The Fibonacci sequence is defined such that each number is the sum of the two preceding ones, starting from 0 and 1.
 How It Works:
 
 Base Case: If nnn is less than 2 (i.e., n=0 or n=1), the function returns n. This handles the first two Fibonacci numbers directly.
