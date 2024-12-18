@@ -14,7 +14,7 @@ Linear search and Binary search(itterative and recursive)
 The linear search algorithm is a simple method for finding a specific value in an array. 
 It works by checking each element one by one until it finds the target or reaches the end of the array.
 
-How It Works
+How It Works:
 
 Start at the first element of the array.
 Compare each element with the target value.
