@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Switcher</title>
+  </head>
+  <style>
+    body {
+      margin: 3em;
+      padding: 0;
+      font-family: sans-serif;
+      font-size: 18px;
+      line-height: 1.5;
+      background-color: #fff;
+    }
+
+    h1 {
+      line-height: 1.25;
+      margin: 2em 0 0;
+    }
+    p {
+      margin: 0.5em 0;
+    }
+
+    #switcher {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    #switcher li {
+      float: left;
+      width: 30px;
+      height: 30px;
+      margin: 0 15px 15px 0;
+      border-radius: 30px;
+      border: 3px solid black;
+    }
+
+    #redButton {
+      background: crimson;
+    }
+    #whiteButton {
+      background: white;
+    }
+    #blueButton {
+      background: dodgerblue;
+    }
+    #greenButton {
+      background: seagreen;
+    }
+  </style>
+  <body>
+    <ul id="switcher">
+      <li id="redButton" data-color="crimson"></li>
+      <li id="whiteButton" data-color="white"></li>
+      <li id="blueButton" data-color="dodgerblue"></li>
+      <li id="greenButton" data-color="green"></li>
+    </ul>
+
+    <h1>Header</h1>
+
+    <p>Click one of the colors above to change the colors in this page!</p>
+    <p>Everything is saved in local storage, try refreshing the page!</p>
+    <script src="main.js"></script>
+  </body>
+</html>
