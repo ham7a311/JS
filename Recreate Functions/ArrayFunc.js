@@ -195,3 +195,22 @@ Array.prototype.myCopyWithin = function (target, start = 0, end = this.length) {
 
     return this;
 }
+
+
+Array.prototype.myConcat = function (...arrays) {
+    let final = [];
+
+    for (let i = 0; i < this.length; i++) {
+        final.push(this[i]);
+    }
+
+    for (let i = 0; i < arrays.length; i++) {
+        if (Array.isArray(arrays[i])) {
+            final.push(...arrays[i]);
+        } else {
+            final.push(arrays[i]);
+        }
+    }
+
+    return final;
+}
