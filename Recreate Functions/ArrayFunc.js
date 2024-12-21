@@ -214,3 +214,55 @@ Array.prototype.myConcat = function (...arrays) {
 
     return final;
 }
+
+
+Array.prototype.myForEach = function (callBackFunc) {
+
+    if (typeof callBackFunc !== 'function') {
+        throw new TypeError(callBackFunc + ' is not a function');
+    }
+
+    for (let i = 0; i < this.length; i++) {
+        if (i in this) {
+            callBackFunc(this[i], i, this);
+        }
+    }
+}
+
+
+Array.prototype.myMap = function (callBackFunc, thisArg) {
+    let final = [];
+
+    if (typeof callBackFunc !== 'function') {
+        throw new TypeError(callBackFunc + ' is not a function');
+    }
+
+    for (let i = 0; i < this.length; i++) {
+        if (i in this) {
+            final.push(callBackFunc.call(thisArg, this[i], i, this));
+        }
+    }
+
+
+    return final;
+}
+
+
+Array.prototype.myFilter = function (callBackFunc, thisArg) {
+    let final = [];
+
+    if (typeof callBackFunc !== 'function') {
+        throw new TypeError(callBackFunc + ' is not a function');
+    }
+
+    for (let i = 0; i < this.length; i++) {
+        if (i in this) {
+            if (callBackFunc.call(thisArg, this[i], i, this)) {
+                final.push(this[i]);
+            }
+        }
+    }
+
+
+    return final;
+}
