@@ -9,44 +9,54 @@ String.prototype.myAnchor = function (name) {
 
 
 String.prototype.myCharAt = function (index) {
-
+    // Check if the index is out of bounds (negative or greater than the string length)
     if (index < 0 || index >= this.length) {
-        return "";
+        return ""; // Return an empty string if the index is invalid
     }
-
+    
+    // Return the character at the specified index
     return this[index];
 }
 
 
 String.prototype.myConcat = function (...arguments) {
+      // If no arguments are provided, return the original string
     if (arguments.length === 0) {
         return this;
     } 
 
+    // Initialize result with the current string    
     let result = this;
 
+    // Iterate over each argument and concatenate it to the result
     for (let argument of arguments) {
-        result += argument;
+        result += argument; // Append each argument to the result
     }
-
+    
+    // Return the concatenated string
     return result;
 }
 
 
 String.prototype.myEndsWith = function (str, position = 0) {
+// If the string to check is longer than the original string, return false
     if (str.length > this.length) {
         return false;
     }
 
+// Ensure the position is within valid bounds (0 to this.length)
     position = Math.max(0, Math.min(position, this.length));
 
+// Loop through the characters of str to check if the original string ends with str
     for (let i = position; i < str.length; i++) {
+    // Compare characters from the end of the original string with the characters of str
         if (this[position - str.length + i] !== str[i]) {
-            return false;
+            return false; // Return false if any character does not match
         }
         
     }
 
+// If all characters match, return true
     return true;
 }
 
