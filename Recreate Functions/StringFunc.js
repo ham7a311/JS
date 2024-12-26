@@ -1,13 +1,3 @@
-String.prototype.myBold = function () {
-    return `<b>${this}</b>`;
-}
-
-
-String.prototype.myAnchor = function (name) {
-    return `<a name="${name}">${this}</a>`;
-}
-
-
 String.prototype.myCharAt = function (index) {
     // Check if the index is out of bounds (negative or greater than the string length)
     if (index < 0 || index >= this.length) {
