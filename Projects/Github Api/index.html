@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch Github Repositories</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: sans-serif;
+      display: flex;
+      min-height: 100vh;
+      justify-content: center;
+      align-items: center;
+      background-color: #ccc;
+    }
+    .cont {
+      width: 1000px;
+    }
+    .cont .repos {
+      padding: 20px;
+      display: flex;
+      background-color: #000;
+      border-radius: 15px;
+    }
+    .cont .repos input {
+      width: 100%;
+      padding: 15px 20px;
+      border: none;
+      font-size: 20px;
+      height: 54px;
+      border-radius: 15px;
+    }
+    .cont .repos input:focus {
+      outline: none;
+    }
+    .cont .repos .button {
+      width: 140px;
+      margin-left: 10px;
+      height: 54px;
+      background-color: crimson;
+      color: #fff;
+      line-height: 54px;
+      text-align: center;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 15px;
+    }
+
+    .cont .show {
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 15px;
+    }
+    .cont .show .box {
+      background-color: rgb(214, 214, 214);
+      border-radius: 15px;
+      padding: 15px;
+      margin-bottom: 10px;
+      overflow: hidden; /* Prevents overflow issues */
+      display: flex; /* Enables flexbox layout */
+      justify-content: space-between; /* Distributes space between items */
+      align-items: center; /* Vertically centers items */
+    }
+
+    .cont .show p {
+      font-weight: 900;
+      font-size: 25px;
+      margin: 0; /* Removes default margin */
+      flex-grow: 1; /* Allows the paragraph to take available space */
+    }
+
+    .cont .show span {
+      font-weight: bold;
+      color: crimson;
+      margin-left: 10px; /* Adds space between text and span */
+    }
+
+    .cont .show .box:not(:last-child) {
+      margin-bottom: 5px; /* Space between boxes */
+    }
+
+    .cont .show .box a {
+      margin: 4px;
+      border-radius: 4px;
+      background-color: crimson; /* Background color for better visibility */
+      color: #fff;
+      font-size: 20px; /* Increased font size for better readability */
+      width: 90px;
+      text-align: center;
+      padding: 5px;
+      align-self: flex-end; /* Aligns the link to the bottom of the box */
+    }
+
+    .cont .show .box a {
+      text-decoration: none;
+      background-color: #000;
+      color: #fff;
+    }
+    .cont .show .box span {
+      background: linear-gradient(16deg, dodgerblue, crimson);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-right: 10px;
+    }
+  </style>
+  <body>
+    <div class="cont">
+      <div class="repos">
+        <input type="text" placeholder="Github Username..." />
+        <span class="button">Get Repos</span>
+      </div>
+      <div class="show">
+        <span>No Data To Show</span>
+      </div>
+    </div>
+    <script src="main.js"></script
+  </body>
+</html>
