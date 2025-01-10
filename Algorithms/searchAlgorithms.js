@@ -13,8 +13,7 @@ Linear search and Binary search(itterative and recursive)
  * Linear Search Algorithm
  
  * This function implements a linear search to find a specific value in an array.
- * It checks each element sequentially until it finds the target value or reaches 
- * the end of the array.
+ * It checks each element sequentially until it finds the target value or reaches the end of the array.
  
  * How It Works:
       1. Start at the first element of the array.
@@ -42,9 +41,8 @@ function linear(arr, target) {
 /**
  * Iterative Binary Search Algorithm
   
- * This function implements the binary search algorithm to efficiently find the index 
- * of a target value within a sorted array. It uses a divide-and-conquer strategy, 
- * significantly reducing the number of comparisons needed compared to a linear search.
+ * This function implements the binary search algorithm to efficiently find the index  of a target value within a sorted array.
+ * It uses a divide-and-conquer strategy, significantly reducing the number of comparisons needed compared to a linear search.
  
  * How It Works:
       1. **Initialization**: 
@@ -96,9 +94,8 @@ function binary(arr, target) {
 /**
  * Recursive Binary Search Algorithm
   
- * This function implements a recursive binary search algorithm to find the index 
- * of a target value within a sorted array. It efficiently narrows down the search 
- * space by dividing it in half with each recursive call.
+ * This function implements a recursive binary search algorithm to find the index of a target value within a sorted array.
+ * It efficiently narrows down the search space by dividing it in half with each recursive call.
   
  * How It Works:
       1. **Function Definition**: 
