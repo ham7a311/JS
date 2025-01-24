@@ -1,3 +1,6 @@
+
+
+
 Document.prototype.myGetElementByTagName = function (tagName) {
     const result = []; // Array to hold matching elements
     const lowerCaseTagName = tagName.toLowerCase(); // Convert tagName to lowercase for case-insensitive comparison
