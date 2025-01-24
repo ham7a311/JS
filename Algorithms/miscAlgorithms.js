@@ -1,6 +1,13 @@
 
 
 
+/*                                                                  JS Algorithms
+
+Misc Problems and Algorithms
+
+*/
+
+
 /**
  * Cartesian Product Function
 
