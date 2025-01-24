@@ -1,3 +1,6 @@
+
+
+
 const btn = document.querySelector(".generate-pass-btn");
 const input = document.querySelector(".pass-input");
 const all = "abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ@#$";
