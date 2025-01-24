@@ -1,3 +1,6 @@
+
+
+
 const el = document.querySelectorAll("#switcher li");
 const classList = [];
 
