@@ -1,3 +1,6 @@
+
+
+
 const number = document.querySelector(".number");
 const buttons = document.querySelectorAll(".button");
 let count = 0;
