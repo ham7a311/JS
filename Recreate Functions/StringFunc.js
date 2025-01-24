@@ -1,3 +1,6 @@
+
+
+
 String.prototype.myCharAt = function (index) {
     // Check if the index is out of bounds (negative or greater than the string length)
     if (index < 0 || index >= this.length) {
