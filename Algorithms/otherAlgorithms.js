@@ -155,6 +155,7 @@ function palindrome(str) {
  * Time Complexity:
   - O(n): The function iterates through the input string once to count character frequencies and then iterates through the object to find the maximum frequency, resulting in linear time complexity.
  */
+
 function maxChar(str) {
     let obj = {}; // Initialize an empty object to hold character counts
     let count = 0; // Initialize count for character occurrences
@@ -183,4 +184,117 @@ function maxChar(str) {
     }
 
     return char; // Return the character with the highest frequency
+}
+
+
+
+/**
+ * Array Chunking Algorithm
+ 
+ * This function splits an array into smaller chunks of a specified size.
+ * If the array cannot be evenly divided, the last chunk will contain the remaining elements.
+ 
+ * How It Works:
+      1. **Initialization**:
+         - An empty array `chunked` is created to hold the resulting chunks.
+     
+      2. **Chunking the Array**:
+         - A `for` loop iterates through the input array `arr` with an increment of `size`.
+         - In each iteration, the `slice` method is used to create a chunk from the current index `i` to `i + size`.
+         - The created chunk is then pushed into the `chunked` array.
+     
+      3. **Return Result**:
+         - The function returns the `chunked` array containing all the chunks.
+ 
+ * Time Complexity:
+  - O(n): The function iterates through the input array once, creating chunks, resulting in linear time complexity.
+ */
+
+function arrayChunk(arr, size) {
+    let chunked = []; // Initialize an empty array to hold the chunks
+
+    // Loop through the input array with an increment of 'size'
+    for (let i = 0; i < arr.length; i += size) {
+        // Create a chunk using slice and push it into the chunked array
+        let chunks = arr.slice(i, i + size);
+        chunked.push(chunks);
+    }
+
+    return chunked; // Return the array of chunks
+}
+
+
+
+/**
+ * String Capitalization Algorithm
+ 
+ * This function capitalizes the first letter of each word in a given string.
+ * Words are defined as sequences of characters separated by spaces.
+ 
+ * How It Works:
+      1. **Initialization**:
+         - An empty string `result` is created to hold the final capitalized string.
+         - A boolean variable `capitalizeNext` is initialized to true to indicate that the first character of the string should be capitalized.
+
+      2. **Iterating Through Each Character**:
+         - A `for` loop iterates through each character of the input string `str`.
+         - For each character, the function checks if it is the start of a word (indicated by the `capitalizeNext` flag).
+
+      3. **Capitalizing Characters**:
+         - If the current character is a letter and `capitalizeNext` is true, the character is capitalized by adjusting its ASCII value.
+         - The capitalized character is appended to the `result` string.
+         - If the current character is a space, the `capitalizeNext` flag is set to true for the next character.
+
+      4. **Appending Other Characters**:
+         - If the current character is not the start of a word, it is appended to the `result` string as is.
+
+      5. **Return Result**:
+         - After the loop, the function returns the `result` string containing the capitalized words.
+ 
+ * Time Complexity:
+  - O(n): The function iterates through the input string once, processing each character, resulting in linear time complexity.
+ */
+
+
+function capitalizeEasyWay(str) {
+   let result = ""; // Initialize an empty string to hold the final capitalized result
+
+  let arr = str.split(" "); // Split the input string into an array of words using space as the delimiter
+
+  // Loop through each word in the array
+  for (let i = 0; i < arr.length; i++) {
+      let uppercase = arr[i][0].toUpperCase(); // Capitalize the first character of the current word
+      // Combine the capitalized first character with the rest of the word (excluding the first character)
+      arr[i] = uppercase + arr[i].slice(1, arr[i].length); // Update the current word in the array
+  }
+
+  // Join the array of words back into a single string with spaces in between and return the result
+  return arr.join(" "); 
+}
+
+
+function capitalizeHardWay(str) {
+    let result = ""; // Initialize an empty string for the result
+    let capitalizeNext = true; // Flag to indicate if the next character should be capitalized
+
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i]; // Get the current character
+
+        // Check if we need to capitalize the character
+        if (capitalizeNext && char !== " ") {
+            // Capitalize the character by adjusting its ASCII value
+            result += String.fromCharCode(char.charCodeAt(0) - 32); // Append capitalized character
+            capitalizeNext = false; // Reset the flag
+        } else {
+            result += char; // Add the character as is
+        }
+
+        // If the current character is a space, set the flag to capitalize the next character
+        if (char === " ") {
+            capitalizeNext = true; // Next character should be capitalized
+        }
+    }
+
+    return result; // Return the final capitalized string
+
 }
