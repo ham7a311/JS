@@ -16,17 +16,17 @@ Other Important Algorithms
  * The algorithm iterates through the input string from the last character to the first, appending each character to a new string.
   
  * How It Works:
-    1. **Initialization**: 
-       - A variable `reversed` is initialized as an empty string to store the reversed result.
-    
-    2. **Looping**: 
-       - A `for` loop is used to iterate through the input string in reverse order, starting from the last character.
-    
-    3. **Appending Characters**:
-       - In each iteration, the current character is appended to the `reversed` string.
-    
-    4. **Return Result**: 
-       - After the loop completes, the `reversed` string is returned as the output.
+      1. **Initialization**: 
+         - A variable `reversed` is initialized as an empty string to store the reversed result.
+      
+      2. **Looping**: 
+         - A `for` loop is used to iterate through the input string in reverse order, starting from the last character.
+      
+      3. **Appending Characters**:
+         - In each iteration, the current character is appended to the `reversed` string.
+      
+      4. **Return Result**: 
+         - After the loop completes, the `reversed` string is returned as the output.
 
  * Time Complexity:
   - O(n): The function iterates through the input string once, where n is the length of the string, 
@@ -52,20 +52,20 @@ function reverse(str) {
  * The algorithm converts the integer to a string, iterates through it from the last character to the first, and constructs the reversed integer.
   
  * How It Works:
-    1. **Initialization**: 
-       - A variable `reversed` is initialized as an empty string to store the reversed result.
-    
-    2. **Conversion**: 
-       - The input integer is converted to a string using `toString()` to facilitate character manipulation.
-    
-    3. **Looping**: 
-       - A `for` loop is used to iterate through the string representation of the integer in reverse order.
-    
-    4. **Appending Characters**:
-       - In each iteration, the current character is appended to the `reversed` string.
-    
-    5. **Return Result**: 
-       - After the loop completes, the `reversed` string is converted back to a number using `Number()` and returned.
+      1. **Initialization**: 
+         - A variable `reversed` is initialized as an empty string to store the reversed result.
+      
+      2. **Conversion**: 
+         - The input integer is converted to a string using `toString()` to facilitate character manipulation.
+      
+      3. **Looping**: 
+         - A `for` loop is used to iterate through the string representation of the integer in reverse order.
+      
+      4. **Appending Characters**:
+         - In each iteration, the current character is appended to the `reversed` string.
+      
+      5. **Return Result**: 
+         - After the loop completes, the `reversed` string is converted back to a number using `Number()` and returned.
 
  * Time Complexity:
   - O(n): The function iterates through the string representation of the integer once, where n is the number of digits in the integer, 
@@ -82,4 +82,43 @@ function reverseInt(int) {
     }
 
     return Number(reversed); // Convert the reversed string back to a number and return it
+}
+
+
+
+/**
+ * Palindrome Checker Algorithm
+  
+ * This function checks whether a given string is a palindrome.
+ * A palindrome is a word, phrase, number, or other sequence of characters that reads the same forward and backward (ignoring spaces, punctuation, and capitalization).
+  
+ * How It Works:
+      1. **Initialization**: 
+         - A variable `reversed` is initialized as an empty string to store the reversed version of the input string.
+      
+      2. **Looping**: 
+         - A `for` loop is used to iterate through the input string in reverse order, starting from the last character.
+      
+      3. **Appending Characters**:
+         - In each iteration, the current character is appended to the `reversed` string.
+      
+      4. **Comparison**: 
+         - After the loop completes, the function checks if the `reversed` string is equal to the original input string.
+      
+      5. **Return Result**: 
+         - The function returns `true` if the input string is a palindrome (i.e., it reads the same backward), and `false` otherwise.
+
+ * Time Complexity:
+  - O(n): The function iterates through the input string once to create the reversed string, 
+          where n is the length of the string, resulting in linear time complexity.
+ */
+function palindrome(str) {
+    let reversed = ""; // Initialize an empty string to hold the reversed result
+
+    // Loop through the string in reverse order
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversed = reversed + str[i]; // Append the current character to the reversed string
+    }
+
+    return reversed === str; // Return true if the reversed string is equal to the original string
 }
