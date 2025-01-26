@@ -257,8 +257,7 @@ function arrayChunk(arr, size) {
 
 
 function capitalizeEasyWay(str) {
-   let result = ""; // Initialize an empty string to hold the final capitalized result
-
+  
   let arr = str.split(" "); // Split the input string into an array of words using space as the delimiter
 
   // Loop through each word in the array
